@@ -1,0 +1,68 @@
+Git commands used in this assignment
+
+git init -b main
+Initializes a new local Git repository and names the default branch main.
+
+git config user.name "Assignment Student"
+git config user.email "student@example.com"
+Sets the author identity used in local commits.
+
+git add index.html about.html
+Stages the initial project files for committing.
+
+git commit -m "Initial project setup"
+Records the initial state of the project in Git history.
+
+git add about.html
+Stages the modified about page.
+
+git commit -m "Update about page description"
+Records the second project change.
+
+git switch -c feature
+Creates and switches to a new branch named feature.
+
+git add index.html
+Stages the feature-branch change.
+
+git commit -m "Add feature preview section"
+Records the feature work on the feature branch.
+
+git switch main
+Switches back to the main branch.
+
+git merge --no-ff feature -m "Merge feature branch into main"
+Merges feature into main while preserving a visible merge commit.
+
+git add .gitignore
+Stages the ignore configuration.
+
+git commit -m "Add ignore rules for logs and temp files"
+Records the .gitignore implementation.
+
+git add about.html
+Stages the additional temporary change.
+
+git commit -m "Add temporary sentence"
+Creates the commit that will be undone.
+
+git revert --no-edit HEAD
+Undoes the last commit by creating a new inverse commit while preserving history.
+
+git status --short --branch
+Displays the current branch and whether the working tree is clean.
+
+git log --oneline --decorate --graph --all
+Displays a compact graph of commits and branch activity.
+
+git check-ignore -v temp/debug.log
+Confirms which .gitignore rule ignores the sample log file.
+
+git remote add origin https://github.com/<username>/git-workflow-assignment.git
+Connects the local repository to the public GitHub repository.
+
+git branch -M main
+Ensures the local branch is named main before publishing.
+
+git push -u origin main
+Publishes the main branch and its complete commit history to GitHub.
